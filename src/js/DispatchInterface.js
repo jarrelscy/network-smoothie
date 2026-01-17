@@ -48,13 +48,13 @@ module.exports = class DispatchInterface {
         return results; 
     }
 
-    startSocks() {
+    startSocks(addresses=null) {
         this.running = true
 
         const port = 1080
         const host = 'localhost'
-        const addresses = this.getNetworkAdapters()
-        this.socksProxy = new SocksProxy(addresses, port, host)
+        const selectedAddresses = addresses && addresses.length ? addresses : this.getNetworkAdapters()
+        this.socksProxy = new SocksProxy(selectedAddresses, port, host)
         
         let ins = this
 
