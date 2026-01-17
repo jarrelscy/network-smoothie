@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./node_modules/xel/themes/material.css">
     <link rel="stylesheet" href="./src/css/style.css">
@@ -26,7 +27,8 @@
                 <x-label style="padding-right: 5px";><strong id='label-enable-service'>off</strong></x-label>
                 <x-switch id="enable-service" onchange="mainToggle" skin="big"></x-switch>
             </header>
-            
+            <p id="selection-warning" class="selection-warning">Select at least one connection to blend.</p>
+            <p class="selection-help">Choose which connections to include in the blend.</p>
                 <main id='networks'>
                 </main>
             </x-card>

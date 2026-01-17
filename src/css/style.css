@@ -7,16 +7,18 @@
     display: flex;
     flex-direction: column;
     background-color: #2f3241;
+    font-size: 16px;
 }
 
 .header {
     text-align: center;
     color: #9feaf9;
-    margin-bottom: -10%;
+    margin: 1.5rem 0 0.5rem;
 }
 
 x-card header {
-    padding-left: 5%;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 dialog {
@@ -24,8 +26,8 @@ dialog {
 }
 
 .items {
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: clamp(0.75rem, 2vw, 1.5rem);
+    padding-right: clamp(0.75rem, 2vw, 1.5rem);
 }
 
 html {
@@ -37,11 +39,14 @@ html {
 h1 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: italic;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    margin: 0.5rem 0;
 }
 
 body {
     padding: 0;
     margin: 0;
+    font-size: 1rem;
 }
 
 
@@ -53,14 +58,61 @@ body {
 }
 
 #networks{
-    padding: 2%;
+    padding: 0.5rem 0 1rem;
     margin: 0;
+    display: grid;
+    gap: 0.75rem;
 }
 
 #card-body {
     padding: 0;
     padding-left: 2%;
     padding-right: 2%;
+}
+
+.network-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.network-card__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.network-card__checkbox {
+    width: 1rem;
+    height: 1rem;
+}
+
+.network-card__name {
+    font-size: 1rem;
+}
+
+.network-card__address {
+    font-size: 0.85rem;
+    color: #b5b9c8;
+}
+
+.selection-warning {
+    margin: 0.5rem 1rem 0;
+    font-size: 0.9rem;
+    color: #ffb3b3;
+    display: none;
+}
+
+.selection-warning.is-visible {
+    display: block;
+}
+
+.selection-help {
+    margin: 0.25rem 1rem 0.5rem;
+    font-size: 0.9rem;
+    color: #c9d1ea;
 }
 
 :not(input):not(textarea),
